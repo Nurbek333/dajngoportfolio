@@ -1,0 +1,101 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+  /* Custom styles for better layout */
+  .article-card {
+      max-width: 300px; /* Limit card width */
+  }
+  .article-meta {
+      font-size: 16px;
+      color: #040202;
+      margin-bottom: 10px;
+  }
+</style>
+<!-- page title -->
+<section class="page-title bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">Mening blogim</h1>
+      </div>
+    </div>
+  </div>
+  <!-- background shapes -->
+  <img src="{% static 'images/illustrations/page-title.png' %}" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="{% static 'images/illustrations/leaf-pink-round.png' %}" alt="illustrations" class="bg-shape-2">
+  <img src="{% static 'images/illustrations/dots-cyan.png' %}" alt="illustrations" class="bg-shape-3">
+  <img src="{% static 'images/illustrations/leaf-orange.png' %}" alt="illustrations" class="bg-shape-4">
+  <img src="{% static 'images/illustrations/leaf-yellow.png' %}" alt="illustrations" class="bg-shape-5">
+  <img src="{% static 'images/illustrations/dots-group-cyan.png' %}" alt="illustrations" class="bg-shape-6">
+  <img src="{% static 'images/illustrations/leaf-cyan-lg.png' %}" alt="illustrations" class="bg-shape-7">
+</section>
+<!-- /page title -->
+
+<!-- blog -->
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="container mt-5">
+        <h1 class="text-center mb-4" style="color: rgb(255, 255, 255);">Mening blogim</h1>
+        <div class="d-flex flex-wrap justify-content-center">
+            {% for article in articles %}
+            <div class="card m-3 article-card" style="border: 2px solid rgb(255, 255, 255);border-radius: 25px;">
+                <img style="width: 300px; height: 270px;border-radius: 25px;" src="{{article.image.url}}" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text" style="background-color: #ffffff;">{{article.description}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- /blog -->
+
+<!-- clients -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Mening mijozlarim</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="client-logo-slider d-flex align-items-center">
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-1.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-2.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-3.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-4.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-1.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-2.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-3.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-4.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /clients -->
+
+
+
+{% endblock content %}

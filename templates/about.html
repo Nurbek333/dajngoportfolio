@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+  /* Custom styles for better layout */
+  .article-card {
+      max-width: 300px; /* Limit card width */
+  }
+  .article-meta {
+      font-size: 16px;
+      color: #040202;
+      margin-bottom: 10px;
+  }
+</style>
+<!-- page title -->
+<section class="page-title-alt bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-white font-tertiary">Men haqimda</h1>
+      </div>
+    </div>
+  </div>
+  <!-- background shapes -->
+  <img src="{% static 'images/illustrations/leaf-bg-top.png' %}" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="{% static 'images/illustrations/dots-group-sm.png' %}" alt="illustrations" class="bg-shape-2">
+  <img src="{% static 'images/illustrations/leaf-yellow.png' %}" alt="illustrations" class="bg-shape-3">
+  <img src="{% static 'images/illustrations/leaf-orange.png' %}" alt="illustrations" class="bg-shape-4">
+  <img src="{% static 'images/illustrations/dots-group-cyan.png' %}" alt="illustrations" class="bg-shape-5">
+  <img src="{% static 'images/illustrations/leaf-cyan-lg.png' %}" alt="illustrations" class="bg-shape-6">
+</section>
+<!-- /page title -->
+
+<!-- about -->
+<section class="section pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <p>Salom Mening ismim Nurbek familiyam Uktamov men 15-yoshdaman va men backend dasturchisiman<p>
+      </div>
+      <div class="col-md-4 text-center drag-lg-top">
+        <div class="shadow-down mb-4">
+          <img src="{% static 'images\about\uzim.jpg' %}" alt="author" class="img-fluid w-100 rounded-lg border-thick border-white">
+        </div>
+        <img src="{% static 'images/about/signature.png' %}" alt="signature" class="img-fluid">
+        <h4>Nurbek Uktamov</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /about -->
+
+<!-- Work Process -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Ish jarayoni</h2>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
+        <div class="">
+          <img src="{% static 'images/icons/plan.png' %}" class="mb-4" alt="icon">
+          <h4 class="mb-4">Tadqiqot va rejalashtirish</h4>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
+        <img src="{% static 'images/icons/design.png' %}" class="mb-4" alt="icon">
+        <h4 class="mb-4">Dizayn va ishlab chiqish</h4>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
+        <img src="{% static 'images/icons/print.png' %}" class="mb-4" alt="icon">
+        <h4 class="mb-4">Yetkazib berish</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ./Work Process -->
+
+<!-- team -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="container mt-5">
+        <h1 class="text-center mb-4" style="color: rgb(0, 0, 0);">Mening Jamoam</h1>
+        <div class="d-flex flex-wrap justify-content-center">
+            {% for article in articles %}
+            <div class="card m-3 article-card" style="border: 2px solid rgb(255, 255, 255);border-radius: 25px;">
+                <img style="width: 300px; height: 320px;border-radius: 25px;" src="{{article.image.url}}" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text" style="background-color: #ffffff;">{{article.description}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+<!-- /team -->
+
+<!-- clients -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Mening mijozlarim</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="client-logo-slider d-flex align-items-center">
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-1.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-2.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-3.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-4.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-1.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-2.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-3.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-4.png' %}" alt="client-logo"></a>
+          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /clients -->
+
+{% endblock content %}
