@@ -6,13 +6,12 @@
 <style>
   /* Custom styles for better layout */
   .article-card {
-      max-width: 300px; /* Limit card width */
-  }
-  .article-meta {
-      font-size: 16px;
-      color: #040202;
-      margin-bottom: 10px;
-  }
+            max-width: 330px; /* Limit card width */
+        }
+        .article-card img {
+            width: 100%;
+            height: 220px;
+        }
 </style>
 
 
@@ -55,52 +54,13 @@
   <!-- social icon -->
   <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
     <li class="mb-3"><a class="text-white" href="https://www.facebook.com/"><i class="ti-facebook"></i></a></li>
-    <li class="mb-3"><a class="text-white" href="https://www.instagram.com/"><i class="ti-instagram"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="https://www.instagram.com/nurbekuktamov66"><i class="ti-instagram"></i></a></li>
     <li class="mb-3"><a class="text-white" href="https://www.twitter.com/"><i class="ti-twitter"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="https://github.com/Nurbek333"><i class="ti-github"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="https://youtube.com/"><i class="ti-youtube"></i></a></li>
   </ul>
   <!-- /social icon -->
 </section>
-
-
-<div class="main hidden">
-
-  <!--Header Start-->
-
-  <header class="header">
-
-<img id="painting" src="https://media.tenor.com/amRwK1jxr0AAAAAi/music.gif" width="50" height="" onclick="playAudio()">
-
-
-<audio id="audio" src="68o19jyq8j5yvg1gu9za.mp3"></audio>
-
-<script>
-  var audio = document.getElementById("audio");
-  var painting = document.getElementById("painting");
-
-  // Устанавливаем начальное состояние воспроизведения
-  var isPlaying = true;
-
-  // Добавляем обработчик события клика на изображение
-  painting.addEventListener("click", function() {
-      if (!isPlaying) {
-          // Если аудио не воспроизводится, начинаем воспроизведение
-          audio.play();
-          isPlaying = true;
-      } else {
-          // Если аудио воспроизводится, останавливаем его
-          audio.pause();
-          isPlaying = false;
-      }
-  });
-
-  // Обработчик события завершения воспроизведения аудио
-  audio.addEventListener("ended", function() {
-      isPlaying = false; // Устанавливаем флаг в false
-  });
-</script>
-
-
-
 
 <!-- /hero area -->
 
@@ -360,64 +320,51 @@
 <!-- /portfolio -->
 
 <!-- testimonial -->
-<!-- <section class="section bg-primary position-relative testimonial-bg-shapes">
+<section class="section bg-primary position-relative testimonial-bg-shapes">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h2 class="section-title text-white mb-5">Testimonials</h2>
+        <h2 class="section-title text-white mb-5">Jamoam haqida</h2>
       </div>
-      <div class="col-lg-10 mx-auto testimonial-slider"> -->
+      <div class="col-lg-10 mx-auto testimonial-slider">
         <!-- slider-item -->
-        <!-- <div class="text-center testimonial-content">
+        <div class="text-center testimonial-content">
           <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
-          <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit
-            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'images/testimonial/client-1.png' %}"
+          <p class="text-white mb-4"><strong>Solijon Haydarov Sifat O'quv markazi boshlig'i</strong> </p>
+          <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'images\testimonial\solijonaka.jpg' %}"
             alt="client-image">
-          <h4 class="text-white">Jesica Gomez</h4>
-          <h6 class="text-light mb-4">CEO, Funder</h6>
-        </div> -->
+          <h4 class="text-white"></h4>
+          <h6 class="text-light mb-4"></h6>
+        </div>
         <!-- slider-item -->
-        <!-- <div class="text-center testimonial-content">
+        <div class="text-center testimonial-content">
           <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
-          <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
-              ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in
-            voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur.</p>
-          <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'images/testimonial/client-1.png' %}"
+          <p class="text-white mb-4"><strong>Nurbek Uktamov Sifat o'quv markazi o'quvchisi va dasturchisi</strong> </p>
+          <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'images\testimonial\man.jpg' %}"
             alt="client-image">
-          <h4 class="text-white">Jesica Gomez</h4>
-          <h6 class="text-light mb-4">CEO, Funder</h6>
-        </div> -->
+          <h4 class="text-white"></h4>
+          <h6 class="text-light mb-4"></h6>
+        </div>
         <!-- slider-item -->
-        <!-- <div class="text-center testimonial-content">
+        <div class="text-center testimonial-content">
           <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
-          <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
-              ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in
-            voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur.</p>
-          <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'images/testimonial/client-1.png' %}"
+          <p class="text-white mb-4"><strong>Muslimbek Baratov Sifat o'quv markazi programmeri va o'qituvchisi</strong></p>
+          <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'images\testimonial\muslimbekaka.jpg' %}"
             alt="client-image">
-          <h4 class="text-white">Jesica Gomez</h4>
-          <h6 class="text-light mb-4">CEO, Funder</h6>
+          <h4 class="text-white"></h4>
+          <h6 class="text-light mb-4"></h6>
         </div>
       </div>
-    </div> -->
-  <!-- </div> -->
+    </div>
+  </div>
   <!-- bg shapes -->
-  <!-- <img src="{% static 'images/backgrounds/map.png' %}" alt="map" class="img-fluid bg-map">
+  <img src="{% static 'images/backgrounds/map.png' %}" alt="map" class="img-fluid bg-map">
   <img src="{% static 'images/illustrations/dots-group-v.png' %}" alt="bg-shape" class="img-fluid bg-shape-1">
   <img src="{% static 'images/illustrations/leaf-orange.png' %}" alt="bg-shape" class="img-fluid bg-shape-2">
   <img src="{% static 'images/illustrations/dots-group-sm.png' %}" alt="bg-shape" class="img-fluid bg-shape-3">
   <img src="{% static 'images/illustrations/leaf-pink-round.png' %}" alt="bg-shape" class="img-fluid bg-shape-4">
   <img src="{% static 'images/illustrations/leaf-cyan.png' %}" alt="bg-shape" class="img-fluid bg-shape-5">
-</section> -->
+</section>
 <!-- /testimonial -->
 
 <!-- clients -->
@@ -459,25 +406,34 @@
 <!-- /clients -->
 
 <!-- blog -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="container mt-5">
-        <h1 class="text-center mb-4" style="color: rgb(0, 0, 0);">Mening blogim</h1>
-        <div class="d-flex flex-wrap justify-content-center">
-            {% for article in articles %}
-            <div class="card m-3 article-card" style="border: 2px solid rgb(255, 255, 255);border-radius: 25px;">
-                <img style="width: 300px; height: 270px;border-radius: 25px;" src="{{article.image.url}}" class="card-img-top">
-                <div class="card-body">
-                    <p class="card-text" style="background-color: #ffffff;">{{article.description}}</p>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-    </div>
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Mening bilogim</h1>
+  {% if messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <ul class="messages mb-0">
+          {% for message in messages %}
+              <li>{{ message }}</li>
+          {% endfor %}
+      </ul>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
-</section>
+  {% endif %}
+  <div class="d-flex flex-wrap justify-content-center">
+      {% for article in articles %}
+      <div class="card m-3 article-card">
+          <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.title }}">
+          <div class="card-body">
+              <h5 class="card-title" style="display: flex;justify-content: center;align-items: center;">{{ article.title }}</h5>
+              <p class="article-meta">{{ article.create_data|date:"F j, Y" }} </p>
+              <p class="card-text">{{ article.description|truncatewords:8 }}</p>
+              <a href="{% url 'article-detail' article.id %}" class="btn btn-primary">Maqolaga o'tish</a>
+          </div>
+      </div>
+      {% endfor %}
+
+  </div>
+
+</div>
 <!-- /blog -->
 
 {% endblock content %}
