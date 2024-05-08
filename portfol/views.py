@@ -13,6 +13,7 @@ def index_view(request):
     return render(request,"index.html",context)
 
 
+
 def about_view(request):
     articles = Jamoa.objects.all().order_by("-id")
     context = {"articles":articles}
@@ -79,6 +80,6 @@ def contact_view(request):
 
 def portfolio_view(request):
     ports = Port.objects.all()
-    context = {"ports":ports}
-    return render(request, "portfolio.html" ,context=context)
+    contexut = {"ports":ports}
+    return render(request, "portfolio.html" ,context=contexut)
 

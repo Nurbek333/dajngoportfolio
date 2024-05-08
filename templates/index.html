@@ -16,7 +16,36 @@
 
 
 <!-- hero area -->
+
+
+<!-- <section class=" slider_section position-relative">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="col-lg-10 col-md-11 mx-auto">
+            {% if messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <ul class="messages mb-0">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endif %} -->
+
 <section class="hero-area bg-primary" id="parallax">
+  {% if messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <ul class="messages mb-0">
+          {% for message in messages %}
+              <li>{{ message }}</li>
+          {% endfor %}
+      </ul>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endif %}
   <div class="container">
     <div class="row">
       <div class="col-lg-11 mx-auto">
@@ -261,62 +290,7 @@
 <!-- /services -->
 
 <!-- portfolio -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title">Portfolio</h2>
-      </div>
-    </div>
-    <div class="row shuffle-wrapper">
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="{% static 'images\portfolio\port1.jpg' %}" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="{% static 'images\portfolio\port2.jpg' %}" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="{% static 'images\portfolio\port3.jpg' %}" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="{% static 'images\portfolio\port4.png' %}" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="{% static 'images\portfolio\port5.png' %}" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <!-- /portfolio -->
 
 <!-- testimonial -->
