@@ -84,7 +84,7 @@ color: #a6ec8f; /* Color of the checked stars and stars before it */
   <!-- background shapes -->
   <img src="{% static 'images/illustrations/page-title.png' %}" alt="illustrations" class="bg-shape-1 w-100">
   <img src="{% static 'images/illustrations/leaf-pink-round.png' %}" alt="illustrations" class="bg-shape-2">
-  <img src="{% static 'images/illustrations/dots-cyan.png' %}" alt="illustrations" class="bg-shape-3">
+  <!-- <img src="{% static 'images/illustrations/dots-cyan.png' %}" alt="illustrations" class="bg-shape-3"> -->
   <img src="{% static 'images/illustrations/leaf-orange.png' %}" alt="illustrations" class="bg-shape-4">
   <img src="{% static 'images/illustrations/leaf-yellow.png' %}" alt="illustrations" class="bg-shape-5">
   <img src="{% static 'images/illustrations/dots-group-cyan.png' %}" alt="illustrations" class="bg-shape-6">
@@ -100,6 +100,7 @@ color: #a6ec8f; /* Color of the checked stars and stars before it */
           <p class="article-meta">{{ article.create_data|date:"F j, Y" }} {{ article.author }}</p>
           <img style="width: 70%;height: 250px;" src="{{ article.image.url }}" alt="{{ article.title }}" class="img-fluid my-3"> <!-- Make the image responsive -->
           <p class="article-description">{{ article.description }}</p>
+          
           {% if messages %}
       <div class="alert alert-success alert-dismissible fade show" role="alert">
           <ul class="messages mb-0">
