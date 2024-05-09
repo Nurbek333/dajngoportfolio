@@ -86,7 +86,7 @@
         <div class="d-flex flex-wrap justify-content-center">
             {% for article in articles %}
             <div class="card m-3 article-card" style="border: 2px solid rgb(255, 255, 255);border-radius: 25px;">
-                <img style="width: 300px; height: 320px;border-radius: 25px;" src="{{article.image.url}}" class="card-img-top">
+              <a href="{{article.github}}"><img style="width: 300px; height: 320px;border-radius: 25px;" src="{{article.image.url}}" class="card-img-top"><a>
                 <div class="card-body">
                     <p class="card-text" style="background-color: #ffffff;">{{article.description}}</p>
                 </div>

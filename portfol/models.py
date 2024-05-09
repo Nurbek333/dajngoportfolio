@@ -40,6 +40,7 @@ class Jamoa(models.Model):
     id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=200)
     description = models.TextField()
+    github = models.CharField(max_length=70)
     is_active = models.BooleanField(default=False)
     image = models.ImageField(upload_to="Article/image")
     create_data = models.DateTimeField(auto_now=True)
